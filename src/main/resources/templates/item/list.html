@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:insert="~{layout/sign-layout :: Head}" />
+<link rel="stylesheet" href="/css/commons/common.css">
+<link rel="stylesheet" href="/css/item/list.css">
+
+<script th:inline="javascript">
+	$(function(){
+		var cateNo=/*[[${cate.no}]]*/null;
+		$.ajax({
+			url:"/menu-list/0",
+			success:function(result){
+				$("#cate1").html(result);
+				
+				$.each($(".cate"),function(index,item){
+					//alert($(item).prop("value"));
+					if($(item).val()==cateNo){
+						$(item).addClass("target");
+					}
+				});
+			}
+		});
+	});
+	
+	
+</script>
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<div class="wrap-list">
+		<section id="nb">
+			<div class="flex">
+				<div id="cate1">
+					
+				</div>
+			</div>
+		</section>
+		
+			<div th:each="dto:${list}" class="menu-list">
+				<div class="menu-list-img flex between">
+					<a th:href="|/item/detail/${dto.no}|"><img th:src="${dto.defImgUrl}"></a>
+				</div>
+				<div class="menu-info">
+					<p>
+						<a th:href="|/item/detail/${dto.no}|">[[${dto.title}]]</a>
+					</p>
+					<p>
+						<a th:href="|/item/detail/${dto.no}|" th:text="${#numbers.formatInteger(dto.price , 0 ,'COMMA')}">원</a>
+					</p>
+				</div>
+			</div>
+		
+	</div>
+	<footer>
+		<th:block th:insert="~{layout/sign-layout :: Footer}" />
+	</footer>
+</body>
+</html>

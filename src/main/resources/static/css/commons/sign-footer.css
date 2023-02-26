@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+footer>.wrap{
+	display:block;
+    height: 259px;
+	background: #624120;
+}
+#copyright{
+	max-width: 1240px;
+	margin: 0 auto;
+	font-family: 'Jua', sans-serif;
+}
+.copy-L{
+	padding: 35px 0;
+	color: #f5efe5;
+}
+.copy-L>p{
+	color: #f5c259;
+	margin-bottom: 20px;
+	padding: 0;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.copy-L>.wrap>p{
+	font-size: 13px;
+	padding: 0;
+}
+.copy-L>.wrap>dl{
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+.copy-L>.wrap>dl>dt{
+	margin-right: 2px;
+}
+.copy-L>.wrap>dl:first-child>dt{
+	margin-top: 2px;
+}
+.copy-L>.wrap>dl:nth-child(2)>dt{
+	margin-top: 2px;
+}
+.copy-L>.wrap>dl>dd{
+	margin-right: 3px;
+}
+.copy-R{
+	top: 42px;
+	right: 0;
+	position: relative;
+}
+.copy-R .con{
+	position: absolute;
+	right: 5px;
+	top: -7px;
+}
+.copy-R .con>li{
+	float: left;
+}
+.copy-R .con>li>a{
+	padding-left: 10px;	
+	color: #f5efe5;
+	font-size: 13px;
+}
+.copy-R .f-btn{
+	padding-top: 27px;
+}
+.copy-R .f-btn a{
+	padding: 6px 25px;
+	color: #f5efe5;
+	border: 1px solid rgba(211,193,179,.7);
+	border-radius: 16px;
+    line-height: 30px;
+    font-size: 13px;
+}

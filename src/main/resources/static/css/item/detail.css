@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+#detail .wrap{
+	width:1440px;
+	margin: 0 auto;
+	padding: 30px;
+	position: relative;
+}
+.defImg{
+	width: 420px;
+	height: 420px;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin: 20px;
+}
+#detail>.wrap .item-info{
+	width: 550px;
+	position: absolute;
+	left: 560px;
+	margin: 20px;
+	padding-left: 30px; 
+}
+#detail>.wrap .item-info ul li{
+	margin-top: 20px;
+}
+#detail>.wrap .item-info ul li:nth-child(2),
+#detail>.wrap .item-info ul li:last-child{
+	margin-top: 40px;
+}
+#detail>.wrap .item-info ul li dl{
+	font-size: 18px;
+}
+#detail>.wrap .item-info ul li dl dt{
+	width: 160px; 
+	color: #777;
+	margin-bottom: 5px;
+}
+#detail>.wrap .item-info ul li dl dd #count{
+	width: 60px;
+	height: 32px;
+	padding: 5px;
+	font-size: 20px;
+}
+#detail>.wrap .item-info ul li dl dd .tPrice{
+	position: absolute;
+	right: 0;
+}
+#detail>.wrap .item-info ul li .title{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 30px;
+}
+#detail>.wrap .item-info ul li dl dd .tPrice #tot-price{
+	font-size: 22px;
+	color: #d72300;
+}
+#detail>.wrap .item-info ul li .btn-d button{
+	background-color: #d72300;
+	padding: 5px 20px;
+	margin-right: 10px;
+    color: #f5efe5;
+    border-radius: 20px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#detail>.wrap .item-info ul li dl dd .free-base span.free {
+	line-height: 22px;
+}

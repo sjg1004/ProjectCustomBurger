@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<th:block th:insert="~{layout/sign-layout :: Head}" />
+	<link rel="stylesheet" href="/css/commons/common.css">
+	<link rel="stylesheet" href="/css/item/detail.css">
+	<script type="text/javascript">
+		function countChanged(){
+			var tot=$("#count").val() * $("#price").val();
+			$("#tot-price").text(addComma(tot));
+		}
+		
+		//숫자 3자리마다 ,표현
+		function addComma(num){
+			var reg=/\B(?=(\d{3})+(?!\d))/g;
+			return num.toString().replace(reg,',');
+		}
+		
+		function btnCartClicked(){			
+			
+			if(!loginCheck()){
+				var result=confirm("카트저장은 로그인 이후 가능합니다.\n로그인페이지로 이동할까요?");
+				if(result){
+					location.href="/signin";
+				}
+				return;
+			}			
+			
+			var ea=$("#count").val();
+			var no=$("#no").val();
+			
+			$.ajax({
+				url: "/member/cart",
+				data:{count:ea, itemNo:no},
+				type: "post",
+				success:function(){
+					if(!confirm("장바구니에 상품을 담았습니다.\n장바구니 페이지로 이동할까요?"))
+						return;
+					location.href="/member/cart";
+					
+				},
+				error:function(){
+					
+				}
+			});
+			
+		}		
+		
+		function loginCheck(){
+			var isLogin=false;
+			$.ajax({
+				url:"/signin-check",
+				async: false,
+				success:function(result){
+					isLogin=result;
+				}
+			})
+			return isLogin;
+		}
+		
+		function btnOrderClicked(){
+			var count=$("#count").val();
+			var itemNo=$("#no").val();
+			
+			location.href=`/user/order?itemNo=${itemNo}&count=${count}`;
+		}
+	</script>
+	
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<h1>디테일페이지</h1>
+	<section id="detail">		
+		<div class="wrap">
+			<div class="flex between">
+				<div class="defImg" th:style="|background-image: url('${detail.defImgUrl}');|"></div>
+				<div class="item-info">
+					<ul>
+						<li>
+							<p class="title" th:text=${detail.title}>상품명</p>
+						</li>
+						<li>
+							<dl class="flex">
+								<dt>상품가격</dt>
+								<dd th:text="${#numbers.formatInteger(detail.price,0,'COMMA')}">상품가격<dd>
+								<span>원</span>
+							</dl>
+						</li>
+						<li>
+							<dl class="flex">
+								<dt>배달방법</dt>
+								<dd th:text="${'커스텀배달'}">배달방법<dd>
+							</dl>
+						</li>
+						<li>
+							<dl class="flex">
+								<dt>배달비</dt>
+								<dd class="flex">
+									<span th:text="${#numbers.formatInteger(3000,0,'COMMA')}">배달비</span>
+									<span>원</span>
+									<div class="flex free-base">
+										<span>(</span>
+										<span th:text="${#numbers.formatInteger(30000,0,'COMMA')}">무료기준금액</span>
+										<span class="free">원 이상 무료)</span>
+									</div>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>구매수량</dt>
+								<dd class="flex between">
+									<input type="hidden" id="price" th:value="${detail.price}">
+									<input type="number" id="count" min="1" th:max="${10}" value="1" onchange="countChanged()">
+									<span class="tPrice">
+										<i>총 주문금액</i>
+										<i th:text="${#numbers.formatInteger(detail.price,0,'COMMA')}" id="tot-price">수량에 따른 금액표현</i>
+										<i>원</i>
+									</span>
+								</dd>
+							</dl>
+						</li>
+						<li class="flex between">
+							<div class="btn-d">
+								<input type="hidden" id="no" th:value="${detail.no}">
+								<button type="button" id="btn-cart" onclick="btnCartClicked()">장바구니</button>
+								<button type="button" id="btn-order" onclick="btnOrderClicked()">주문하기</button>
+							</div>
+						</li>
+						<li>
+							<div class="de-content" th:utext="${detail.content}">내용</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+	</section>
+	<footer>
+		<th:block th:insert="~{layout/sign-layout :: Footer}" />
+	</footer>
+</body>
+</html>

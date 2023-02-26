@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<th:block th:insert="~{layout/sign-layout :: Head}" />
+<link rel="stylesheet" href="/css/signup/signup2.css">
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<div class="main">
+		<div class="main-head">
+			<div class="head-title">
+				<h2>
+					회원가입
+					<span> > 정보입력</span>
+				</h2>
+			</div>
+		</div>
+		<div class="main-container">
+			<div class="tit">
+				<h2>회원 정보 입력</h2>
+			</div>
+			<form action="/signup2" method="post">
+			<div class="tit01">
+				<h3>
+					<img src="/images/icon-1.png">
+					<span>기본정보</span>
+				</h3>
+				<div class="basicInfo">
+					<span>
+						<p>이메일</p>
+						<input type="text" name="email">
+					</span>
+					<span>
+						<p>비밀번호</p>
+						<input type="text" name="pass">
+					</span>
+					<span>
+						<p>닉네임</p>
+						<input type="text" name="nickName">
+					</span>
+				</div>
+				<div class="tit02">
+					<h3>
+						<img src="/images/icon-2.png">
+						<span>개인정보</span>
+					</h3>
+				</div>
+					<div class="privateInfo">
+					<span>
+						<p>이름</p>
+						<input type="text" name="name">
+					</span>
+					<span>
+						<p>생일</p>
+						<input type="text" name="birth">
+					</span>
+					<span>
+						<p>전화번호</p>
+						<input type="text" name="tel">
+					</span>
+				</div>
+				<div class="tit03">
+					<h3>
+						<img src="/images/icon-3.png">
+						<span>마케팅 수신동의</span>
+					</h3>
+				<div>
+					<span>
+						<input type="checkbox">
+						이메일을 통한 이벤트/ 주문 정보의 수신에 동의합니다.
+					</span>
+					<span>
+						<input type="checkbox">
+						SMS를 통한 이벤트/ 주문 정보의 수신에 동의합니다.
+						
+					</span>
+					<div class="wrap-signup-btn">
+						<button class="signup-btn">회원가입</button>
+					</div>
+				</div>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</body>
+<footer>
+	<th:block th:insert="~{layout/sign-layout :: Footer}" />
+</footer>
+</html>

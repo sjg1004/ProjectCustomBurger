@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+
+<th:block th:insert="~{layout/sign-layout :: Head}" />
+<link rel="stylesheet" href="/css/commons/common.css">
+<link rel="stylesheet" href="/css/signin/signin.css">
+<script src="/js/signup.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+	rel="stylesheet">
+<script type="text/javascript">
+	$(function() {
+		$("#noaccorder").hide();
+		$("#btn-noacc").click(gone);
+		$("#btn-noaccorder").click(come);
+	})
+
+	function gone() {
+		$("#noacc").show();
+		$("#noaccorder").hide();
+	}
+	function come() {
+		$("#noacc").hide();
+		$("#noaccorder").show();
+	}
+
+	$(function() {
+		$("#hidepw").hide();
+		$("#btn-showpw").click(view);
+		$("#btn-hidepw").click(cover);
+
+	})
+	function view() {
+		$("#hidepw").show();
+		$("#showpw").hide();
+		$("#pw").attr('type', 'password');
+	}
+	function cover() {
+		$("#hidepw").hide();
+		$("#showpw").show();
+		$("#pw").attr('type', 'text');
+	}
+	$(function() {
+		$("#hidepw2").hide();
+		$("#btn-showpw2").click(view2);
+		$("#btn-hidepw2").click(cover2);
+
+	})
+	function view2() {
+		$("#hidepw2").show();
+		$("#showpw2").hide();
+		$("#pw2").attr('type', 'password');
+	}
+	function cover2() {
+		$("#hidepw2").hide();
+		$("#showpw2").show();
+		$("#pw2").attr('type', 'text');
+	}
+</script>
+</head>
+<body class="normal-font">
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<main>
+		<div class="login-container">
+
+			<ul>
+				<li>YOUR WAY</li>
+				<li>커스텀버거에 오신걸 환영합니다!</li>
+			</ul>
+
+			<div class="loginbox">
+				<div class="loginbox-account">
+					<p>
+						<img alt="" src="/images/logo/key.png"> &nbsp;&nbsp;일반 로그인
+					</p>
+					<form action="/member/login" method="post">
+						<label class="login-input">
+							<input type="text" name="email" placeholder="아이디 (이메일)" class="login-input-text">
+						</label>
+						<br>
+						<label id="lpw"> 
+							<input type="password" name="pass" placeholder="비밀번호" id="pw" class="login-input-text">
+							<button type="button" id="btn-showpw">
+								<img src="/images/logo/passwordshow.png" id="showpw" alt="" style="position: absolute; right: 45px; bottom: 0.1px;">
+							</button>
+							<button type="button" id="btn-hidepw">
+								<img src="/images/logo/passwordhide.png" id="hidepw" alt="" style="position: absolute; right: 45px; bottom: 0.1px;">
+							</button>
+						</label>
+					
+										
+					<div class="login-simple">
+						<label><input type="checkbox" class="save-id">아이디 저장</label>
+						<label><input type="checkbox" class="save-id">자동 로그인</label>
+						
+					</div>
+					<div class="login-btn">
+						<label>
+							<button type="submit"  class="btn" style="background-color: #d72300;">로그인</button>			
+							<a href="/signup"><button type="button"  class="btn" >회원가입</button></a>	
+						</label>
+					</div>
+				</form>
+					<div class="findmy">
+						<a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a>
+					</div>
+				</div>
+				<div class="loginbox-social">
+					<p>
+						<img alt="" src="/images/logo/lock.png"> &nbsp;&nbsp;간편 로그인
+					</p>
+					<ul>
+						<li><a href="#"><button class="social-login naver">네이버
+									로그인</button></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><button class="social-login kakao">카카오톡
+									로그인</button></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><button class="social-login apple">애플
+									로그인</button></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="order-container">
+			<div class="in-order-container">
+				<div id="noacc">
+					<ul class="btn-order ">
+						<li class="order-noacc">
+							<button type="button" class="choosen  paddinglr undered">
+								<span>비회원 주문</span>
+							</button>
+							<button type="button" id="btn-noaccorder"
+								class="nochoosen paddinglr">
+								<span>비회원 주문내역</span>
+							</button>
+						</li>
+					</ul>
+					<div class="white-box">
+						<ul>
+							<li>회원가입 없이 비회원으로 주문이 가능합니다.</li>
+							<li><a href="#" class="uptopage"></a></li>
+						</ul>
+
+					</div>
+					<ul>
+						<li class="btn-position">
+							<button class="btn">
+								<span>비회원 주문</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div id="noaccorder">
+					<ul class="btn-order ">
+						<li class="order-noacc">
+							<button type="button" id="btn-noacc" class="nochoosen paddinglr">
+								<span>비회원 주문</span>
+							</button>
+							<button type="button" class="choosen  paddinglr undered">
+								<span>비회원 주문내역</span>
+							</button>
+						</li>
+					</ul>
+					<div class="white-box">
+						<form action="" method="post">
+							<ul>
+								<li>주문번호 &nbsp <input type="text" placeholder="주문번호 입력">
+									&nbsp&nbsp&nbsp&nbsp 비밀번호 &nbsp 
+								<label> <input
+										type="text" placeholder="비밀번호" id="pw2">
+
+
+										<button type="button" id="btn-showpw2">
+											<img src="/images/logo/passwordshow.png" id="showpw2" alt="" style="position: absolute; right: 45px; bottom: 0.1px;">
+										</button>
+										<button type="button" id="btn-hidepw2">
+											<img src="/images/logo/passwordhide.png" id="hidepw2" alt="" style="position: absolute; right: 45px; bottom: 0.1px">
+										</button>
+								</label>
+								<li><a href="#" class="uptopage"></a></li>
+							</ul>
+						</form>
+					</div>
+					<ul>
+						<li class="btn-position">
+							<button class="btn" id="find">
+								<span>조회하기</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<th:block th:insert="~{layout/sign-layout :: Footer}" />
+	</footer>
+</body>
+</html>

@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+body{
+	font-family: 'Jua', sans-serif;
+}
+
+.main-area{
+	width:1440px;
+	margin:0 auto;
+}
+main > .slideshow{
+	height:480px;
+	overflow:hidden;
+	position:relative;
+	
+}
+main > .wrap-silder > .slideshow_slides{
+	width:100%;
+	height:100%;
+	position: absolute;
+	
+}
+
+main > .wrap-silder > .slideshow_slides > a{
+	position:absolute;
+	width:100%;
+	height:100%;
+	text-align: center;
+	
+}
+
+main > .wrap-silder > .slideshow_nav a{
+	position: absolute;
+	width:60px;
+	height:60px;
+	cursor: pointer;
+}
+main > .wrap-silder > .slideshow_nav a.disabled{
+	display:none;
+}
+main > .wrap-silder > .slideshow_nav .prev{
+	top:50%;
+	margin-top: -30px;
+	left:0;
+}
+main > .wrap-silder > .slideshow_nav .next{
+	top:50%;
+	margin-top: -30px;
+	right:0;
+}
+
+main > .slideshow > .indicator{
+ 	
+    width:96px;
+	height:8px;
+	position:absolute;
+	bottom:25px;
+	left:50%; 
+	margin-left:-48px;
+	
+	
+	
+}
+main > .wrap-silder .indicator > a{
+	
+	width:8px;
+	height:8px;
+	/* border-radius: 50%; */
+	background-color: #fff;
+	text-indent: -999em;
+	cursor: pointer;
+	display:block;
+	border-radius: 50%;
+
+}
+main > .wrap-silder .wrap-btn > a.active{
+	
+	background-color: red;
+}
+
+main > .sns-area {
+	background-color: #683a2f;
+	height:160px;
+	margin-top: -4px;
+	padding:33px 148px;
+	
+}
+main > .sns-area > ul > li{
+	position: relative;
+}
+main > .sns-area > ul > li > a{
+	text-decoration: none;
+	
+}
+main > .sns-area > ul > li > a > .tit{
+	color:#fff;
+	font-size: 1.25rem;
+	font-weight: 800;
+	position:absolute;
+	top:10px;
+}
+main > .sns-area > ul > li > a > .text-info{
+	
+	display:inline-block;
+	background-color:#fff;
+	border-radius:3px;
+	color:#000;
+	background-repeat: no-repeat;
+	font-size: .75rem;
+	height: 26px;
+	line-height: .75rem;
+	font-weight: 800;
+	padding-left:25px;
+	background-position: 5px;
+	padding-top: 7px;
+	position: absolute;
+	top:40px;
+}
+main > .sns-area > ul > li:nth-child(1) > a > .text-info{
+	background-image: url("/images/index/youtube_SI.png");
+	width:92px;
+	
+}
+main > .sns-area > ul > li:nth-child(2) > a > .text-info{
+	background-image: url("/images/index/facebook_SI.png");
+	width:105px;
+}
+main > .sns-area > ul > li:nth-child(3) > a > .text-info{
+	background-image: url("/images/index/instagram_SI.png");
+	width:105px;
+}
+main > .delivery-area{
+	height:480px;
+	
+}
+main > .delivery-area img{
+	height:480px;
+}
+main > .delivery-area > ul > li{
+	width:720px;
+	height:480px;
+}
+main > .delivery-area > ul > li > a{
+	display: block;
+	width:100%;
+	height:100%;
+	
+}
+
+main > .delivery-area > ul > li:first-child {
+	background-color: #b08972;
+}
+main > .delivery-area > ul > li:nth-child(2) {
+	background-color: #c7a186;
+	
+}
+main > .order-info{
+	text-align: center;
+	padding:100px 0;
+	font-weight: bold;
+}
+main > .order-info >h2{
+	font-size: 48px;
+	margin-bottom: 16px;
+}
+main > .order-info >div  {
+	margin:35px 0;
+}
+main > .order-info >div >button{
+	width:140px;
+	height:50px;
+	background-color: #d94e28;
+	border-radius: 50px;
+	font-size: 24px;
+	color: #fff;
+	
+	font-family: 'Jua', sans-serif;
+}
+/* main > .order-info > ul > li{
+	border-right: 1px solid #a9a9a9;
+} */
+main > .order-info > ul > li > span{
+	display: block;
+	font-weight: bold;
+}
+main > .order-info > ul > li > strong{
+	color:red;
+	font-weight: 800;
+	text-align: center;
+}
+main > .order-area > div{
+	height:200px;
+	position:relative;
+}
+main > .order-area > div > img{
+	width:1440px;
+	height:200px;
+}
+main > .order-area .order-text{
+	width:1144px;
+	position:absolute;
+	height:200px;
+	top:60px;
+	left:50%; 
+	margin-left:-572px;
+	color:#fff;
+}
+main > .order-area .order-text h2{
+	font-size: 32px;
+	margin-bottom: 20px;
+	
+}
+main > .order-area .order-text p{
+	font-size: 20px;
+	float: left;
+}
+main > .order-area .order-text strong{
+	font-size: 40px;
+	float:right;
+	color:#fff;
+}
+main > .order-area .order-text strong > a{
+	font-size: 40px;
+	color:#fff;
+	text-decoration: none;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<th:block th:insert="~{layout/sign-layout :: Head}" />
+<link rel="stylesheet" href="/css/commons/common.css">
+<link rel="stylesheet" href="/css/item/cart.css">
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<h1>장바구니페이지</h1>
+	<section id="cart">
+		<!-- <p>장바구니</p> -->
+		<div class="wrap">
+			<table>
+				<thead>
+					<tr>
+						<td>선택</td>
+						<td>상품이미지</td>
+						<td>상품정보</td>
+						<td>구매수량</td>
+						<td>상품금액</td>
+						<td>배송비</td>
+						<td>주문금액</td>
+						<td>주문하기</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="dto : ${list}" >
+						<td>
+							<input type="checkbox">
+							<input class="cartItemNo" th:id="${'ci-no-' + dtoStat.index}" type="hidden" th:value="${dto.no}">
+						</td>
+						<td><img alt="상품목록이미지" th:src="${dto.item.defImgUrl}" height="100px"></td>
+						<td>
+							<p th:text="${dto.item.title}">상품명</p>
+							<p th:text="${#numbers.formatInteger(dto.item.price , 0 ,'COMMA')}">단가</p>
+						</td>
+						<td th:text="${dto.count}">구매수량</td>
+						<td th:text="${#numbers.formatInteger(dto.item.price*dto.count , 0 ,'COMMA')}">상품금액</td>
+						<td th:text="${#numbers.formatInteger(dto.dPrice , 0 ,'COMMA')}">배송비</td>
+						<td th:text="${#numbers.formatInteger(dto.item.price*dto.count+dto.dPrice, 0 ,'COMMA')}">주문금액</td>
+						<td><button>주문하기</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+	</section>
+	<footer>
+		<th:block th:insert="~{layout/sign-layout :: Footer}" />
+	</footer>
+</body>
+</html>

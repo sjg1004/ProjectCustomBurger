@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<th:block th:insert="~{layout/sign-layout :: Head}" />
+<link rel="stylesheet" href="/css/signup/signup.css">
+<script src="/js/visual.js"></script>
+	<script src="/js/signup.js"></script>
+<script>
+	function selectAll(selectAll)  {
+		  const checkboxes 
+		     = document.getElementsByName('check')
+		  
+		  checkboxes.forEach((checkbox) => {
+		    checkbox.checked = selectAll.checked
+		  })
+		}	
+	function checkSelectAll(checkbox)  {
+		  const selectall 
+		    = document.querySelector('input[name="checkall"]');
+		  
+		  if(checkbox.checked === false)  {
+		    selectall.checked = false;
+		  }
+		}
+</script>
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/sign-layout :: Header}" />
+	</header>
+	<main>
+		<div class="mainContent">
+			<div class="web-container">
+				<h2>회원가입</h2>
+				<div class="log-container">
+					<h3>
+						<img src="/images/bell.png">
+						<span>이용약관</span>
+					</h3>
+				</div>
+			
+			<div class="container_auth-list">
+				<div class="titbox">
+					<p>회원가입 약관 동의 및 본인인증을 진행합니다</p>
+				</div>
+				<div>
+					<span>
+						<input type="checkbox" name="check" onclick="checkSelectAll(this)" class="check">
+						<label>버거킹 이용약관(필수)</label>
+					</span>
+					<button type="button">
+						<span>상세보기</span>
+					</button>
+				</div>
+				<div>
+					<span>
+						<input type="checkbox" name="check" onclick="checkSelectAll(this)" class="check">
+						<label>개인정보처리방침(필수)</label>
+					</span>
+					<button type="button">
+						<span>상세보기</span>
+					</button>
+				</div>
+				<div>
+					<span>
+						<input type="checkbox" name="check" onclick="checkSelectAll(this)" class="check">
+						<label>E-mail 광고성 정보 동의(선택)</label>
+					</span>
+				</div>
+				<div class="sms">
+					<span>
+						<input type="checkbox" name="check" onclick="checkSelectAll(this)" class="check">
+						<label>SMS 광고성 정보 동의(선택)</label>
+					</span>
+				</div>
+				<span class="info">다양한 이벤트와 주문 정보를 보내 드립니다.</span>
+				<div class="divide">
+					<span>
+						<input type="checkbox" name="checkall" onclick="selectAll(this)" class="check">
+						<label>약관 전체 동의</label>
+					</span>
+				</div>
+			</div>
+			<div class="container02_auth-list">
+				<div class="titbox">
+					<p>약관 동의 후 진행해 주세요.</p>
+				</div>
+				<ul class="textlist01">
+					<li>타인의 개인정보를 도용하여 가입 후 적발 시 서비스 이용에 제한을 받으며, 법적 제재를 받을 수 있습니다.</li>
+				</ul>
+			</div>
+			<div class="c_btn">
+				<a href="/signup2">
+					<span>개인정보 입력</span>
+				</a>
+			</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<th:block th:insert="~{layout/sign-layout :: Footer}" />
+	</footer>
+</body>
+</html>

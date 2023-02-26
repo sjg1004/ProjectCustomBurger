@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+body{
+	font-family: 'Jua', sans-serif;
+}
+.flex{display:flex;}
+.row{flex-direction: row;}
+.column{flex-direction: column;}
+.center{justify-content: center;}
+.between{justify-content: space-between;}
+.around{justify-content: space-around;}
+a{
+	text-decoration: none;
+	color:#000;
+}

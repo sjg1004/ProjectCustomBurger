@@ -1,0 +1,262 @@
+@charset "UTF-8";
+.flex-wrap{display: flex; flex-flow: wrap;}
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+main{ width: 100%; height: 100%;}
+body{ width: 100%; height: 100%;}
+/* html{
+	height: 100%;
+    margin: 0;
+    padding: 0;} */
+span{
+	text-align: center;
+	font-family: 'jua', sans-serif;
+}
+button{cursor: pointer; border: none; background: #fff;}
+.btn {	
+    display: inline-block;
+    width: 220px;
+    height: 68px;
+    font-size: 30px;
+    padding: 12px 10px 10px;
+    font-family: 'Jua', sans-serif;
+    font-weight: 400;
+    color: #fff;  
+    line-height: 46px;
+    background: #512314;
+    border-radius: 10px;
+    cursor: pointer;
+}
+p{display: flex; font-size: 20px; text-align: center; align-items: center; padding: 0px 15px 0px 15px;}
+.login-container{width: 100%; height: 66%; padding-left:3%; }
+.loginbox{width: 100%; height: 100%; }
+.loginbox-account{
+	width: 47%;
+	text-align: center;
+	border-right: 1px solid #e5e5e5;
+	float: left;
+	overflow: hidden	
+}
+a{
+	color: #000000;
+	text-decoration: none;
+	font-size: 18px;
+}
+.loginbox-social{
+	width: 50%;
+	text-align: center;
+	float: right;
+	overflow: hidden
+}
+.login-simple{margin-right: 200px;}
+.login-simple>label{
+	display: inline-block;
+	padding: 5px 20px 10px -35px;
+	font-size: 16px;
+	align-items: center;
+    vertical-align: middle;
+	/* margin: 0 auto; */
+}
+input[type=checkbox]{
+	display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+	background: url("/images/logo/logincheck.png") no-repeat; 
+	margin-bottom: 8px;
+}
+.white-box>form label{
+	position: relative; 
+}
+.loginbox-account>form label{
+	position: relative;
+	
+}
+.loginbox-account>form #lpw{
+	margin-left:25px;
+}
+.loginbox-account>form label>input{
+	/* width: 420px; */
+}
+
+
+
+
+.btn-position{text-align: center;}
+
+.order-container{
+	display:table;
+	width: 100%; 
+	
+	height: 465px; 
+	background: #f2ebe6;
+}
+.in-order-container{
+	vertical-align:middle; 
+	padding-left: 16px; 
+	padding-right: 16px;
+	max-width: 1184px;
+    margin: 0 auto;
+}
+#noacc{
+	height: 100%;
+}
+
+li{list-style: none;
+	font-family: 'jua', sans-serif;
+}
+
+.normal-font{
+	font-family: 'Jua', sans-serif; 
+	font-size: 40px;
+	font-weight: 800;
+}
+
+@font-face{
+	font-family: "bk";
+	src: url("/images/font/burgerking.ttf") format('truetype');	
+}
+.font-bk{
+	font-family: bk;
+}
+
+.for-login{
+	display: inline-block;
+	width: 459px;
+    height: 66px;
+    margin: 0;
+    padding: 3px 10px 3px 4px;
+    font-weight: 400;
+    font-size: 1.375rem;
+    color: #000;
+    vertical-align: middle;
+    background: url(/images/logo/underline.png) repeat-x 0 100%;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+.social-login{
+	position: relative;
+    display: inline-block;
+    width: 338px;
+    height: 64px;
+    padding: 5px 5px 5px 70px;
+    font-size: 1.25rem;
+    line-height: 54px;
+    text-align: center;
+    border-radius: 6px;
+     box-shadow: 0 4px 4px -4px black;
+}
+.social-login::before{border-left-color: #999;}
+
+.naver{
+    color: hsla(0,0%,100%,.8);
+    background: #1ec800 url(/images/logo/naver.png) no-repeat 21px;
+    border-color:#1ec800;
+}
+
+.kakao{
+    color: #000;;
+    background: #ffeb00 url(/images/logo/kakao.png) no-repeat 21px;
+    border-color:   #ffeb00;
+}
+.apple{
+    color: #fff;
+    background: #000 url(/images/logo/apple.png) no-repeat 21px;
+    border-color:#000;
+}
+
+
+.btn-order{
+	width: 100%;	
+	overflow: auto;
+}
+.type-box{
+	width: 50%;
+}
+.white-box{
+	height: 100%;
+	min-height: 140px;
+	position: relative;
+    margin: 15px 0 80px 80px;
+    padding: 20px 50px;
+    font-size: 1.375rem;
+    background: #fff;
+    vertical-align: middle;
+}
+.white-box ul li{
+	vertical-align: middle;
+}
+.order-noacc{
+	padding: 40px 0 0 0;
+	font-weight: 700;
+    font-size: 32px;
+    color: #b8b8b8;
+	border: none;
+	font-family: 'jua', sans-serif;
+	background: #f2ebe6;
+}
+.choosen{
+	display: inline-block;
+	text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    background:#f2ebe6;
+	color: #e22219; 	
+}
+.undered{
+	padding: 0 0 0 4px;
+	border-width: 4px;
+	border-bottom-color: #e22219;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
+.nochoosen{
+	display: inline-block;
+	text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+	color: #b8b8b8;
+	background:#f2ebe6; 
+	border: none;
+}
+.uptopage {
+    position: fixed;
+    right: 20px;
+    bottom: 220px;
+    width: 52px;
+    height: 52px;
+    text-indent: -9999em;
+    background: url(/images/logo/uptopage.png) no-repeat 0 0;
+}
+
+.paddinglr{padding: 0 0 14px 14px;}
+
+input{
+	display: inline-block;
+	width: 250px;
+    height: 66px;
+    font-weight: 400;
+    font-size: 1.375rem;
+    color: #000;
+    vertical-align: middle;
+    background: url(/images/logo/underline.png) repeat-x 0 100%;
+    border-radius: 0;
+    font-family: 'jua', sans-serif;
+    border: none;
+    outline: none;
+    overflow: hidden
+}
+.findmy{margin-right: 200px;}
+
+.findmy>a{
+	padding: 0 15px 0 15px;
+	
+}
+
+.save-id{
+	width:25px; margin-right:10px;
+}
+.login-input-text{
+	width:420px;
+}

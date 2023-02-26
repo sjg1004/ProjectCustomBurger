@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<th:block th:insert="~{layout/layout :: Head}" />
+	<link rel="stylesheet" href="/css/faq.css">
+</head>
+<body>
+	<header>
+		<th:block th:insert="~{layout/layout :: Header}" />
+	</header>
+	<h1>FAQ페이지</h1>
+	<div class="wrap-faq">
+		<h2>고객센터</h2>
+		<div class="faq-menu">
+			<ul class="flex">
+				<li>전체</li>
+				<li>제품/품질/서비스</li>
+				<li>딜리버리 주문</li>
+			</ul>
+		</div>
+		<div class="faq-list">
+			<table>
+					
+					<tr>
+						<th>NO.</th>
+						<th>구분</th>
+						<th>제목</th>
+					</tr>
+					<tr>
+						<td class="question">1</td>
+						<td>FAQ</td>
+						<td>매장에서 판매하는 모든 메뉴 배달 가능한가요?</td>
+					</tr>
+					<tr>
+						<td class="question">1</td>
+						<td>FAQ</td>
+						<td>매장에서 판매하는 모든 메뉴 배달 가능한가요?</td>
+					</tr>
+					<tr>
+						<td class="question">1</td>
+						<td>FAQ</td>
+						<td>매장에서 판매하는 모든 메뉴 배달 가능한가요?</td>
+					</tr>
+				
+			</table>
+		</div>
+	</div>
+	
+</body>
+</html>

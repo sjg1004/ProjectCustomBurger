@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+header{background-color: #d94e28}
+header>.wrap{
+	width: 1440px;
+	margin: 0 auto;
+}
+#menu {
+	position: relative;
+	margin-left: 100px;
+	padding-left: 180px;
+}
+.mnb{
+	position: relative;
+	height: 120px;
+	padding-top: 24px;
+	margin-right: 100px;
+	margin-left: 10px;
+	font-family: 'Jua', sans-serif;
+}
+#menu .logo>a{
+	position: absolute;
+    left: 8px;
+    top: 10px;
+    width: 200px;
+    height: 130px;
+    background-image: url('/images/icon/sign_logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.btn_login>button{
+	background: #624120;
+	position: absolute;
+	right: 5px;
+	top: 75%;
+	width: 160px;
+	height: 45px;
+	margin-top: -15px;	
+	border-radius: 25px;
+	cursor: pointer;	
+}
+.btn_login>button>a{
+	font-family: 'Jua', sans-serif;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+	letter-spacing: 2px;
+}
+.top-menu{
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+.top-menu>li{
+	float: left;
+	padding-left: 20px;
+}
+.top-menu>li>a{
+	color: #fff;
+}
+.lnb{
+	margin-top: 50px;
+	height: 50px;
+	padding: 10px 0;
+	color: #fff;
+	line-height: 30px;
+	background: #000;
+	
+	
+}

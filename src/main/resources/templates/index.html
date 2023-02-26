@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<th:block th:insert="~{layout/layout :: Head}" />
+<link rel="stylesheet" href="/css/index.css">
+<script src="/js/index.js"></script>
+
+</head>
+<body>
+	
+	<th:block th:insert="~{layout/layout :: Header}" />
+	
+	<main th:fragment="Main" class="main-area">
+		<div class="wrap-silder slideshow">
+			<div class="banner slideshow_slides">
+				<a href=""><img alt="banner01" src="/images/index/banner01.png"></a>
+				<a href=""><img alt="banner02" src="/images/index/banner02.png"></a>
+				<a href=""><img alt="banner03" src="/images/index/banner03.png"></a>
+				<a href=""><img alt="banner04" src="/images/index/banner04.png"></a>
+				<a href=""><img alt="banner05" src="/images/index/banner05.png"></a>
+				<a href=""><img alt="banner06" src="/images/index/banner06.png"></a>
+			</div>
+			<div class="slideshow_nav">
+				<a class="prev"><img alt="prev" src="/images/index/prev.png"></a> <a
+					class="next"><img alt="next" src="/images/index/next.png"></a>
+			</div>
+			<div class="wrap-btn indicator flex between">
+				<!-- 
+					<a href="" class="button01 step on">button1</a>
+					<a href="" class="button02 step">button2</a>
+					<a href="" class="button03 step">button3</a>
+					<a href="" class="button04 step">button4</a>
+					<a href="" class="button05 step">button5</a>
+					<a href="" class="button06 step">button6</a>
+					 -->
+			</div>
+		</div>
+		<div>
+			<iframe width="1440" height="605"
+				src="https://www.youtube.com/embed/LcMFpQnyFTs"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+		<div class="sns-area">
+			<ul class="flex between">
+				<li><a href="#"><img alt="youtube"
+						src="/images/index/youtube.png"> <strong class="tit">YOUTUBE</strong>
+						<strong class="text-info">구독 4.9만</strong> </a></li>
+				<li><a href="#"><img alt="youtube"
+						src="/images/index/facebook.png"> <strong class="tit">FACEBOOK</strong>
+						<strong class="text-info">좋아요 47.8만</strong> </a></li>
+				<li><a href="#"><img alt="youtube"
+						src="/images/index/instagram.png"> <strong class="tit">INSTAGRAM</strong>
+						<strong class="text-info">팔로워 74.9K</strong> </a></li>
+			</ul>
+		</div>
+		<div class="delivery-area">
+			<ul class="flex">
+				<li><a href="#"><img alt="del01"
+						src="/images/index/delivery01.png"></a></li>
+				<li><a href="#"><img alt="del02"
+						src="/images/index/delivery02.png"></a></li>
+			</ul>
+		</div>
+		<div class="order-info">
+			<h2>매장찾기</h2>
+			<span>고객님 주변에 있는 버거킹을 찾아보세요!</span>
+			<div>
+				<button>매장찾기</button>
+			</div>
+
+			<ul class="flex between">
+				<li><img alt="list01" src="/images/index/list01.gif"> <span>집에서
+						편안하게 <br>받을 수 있는
+				</span> <strong>딜리버리</strong></li>
+				<li><img alt="list02" src="/images/index/list02.gif"> <span>미리
+						주문하고 <br>픽업가능한
+				</span> <strong>킹오더</strong></li>
+				<li><img alt="list03" src="/images/index/list03.gif"> <span>차안에서
+						빠르게 <br>이용할 수 있는
+				</span> <strong>드라이브 스루</strong></li>
+				<li><img alt="list04" src="/images/index/list04.gif"> <span>24시간
+						언제든 <br>함께할 수 있는
+				</span> <strong>24시간</strong></li>
+				<li><img alt="list05" src="/images/index/list05.gif"> <span>든든한
+						<br>아침을 도와줄
+				</span> <strong>아침메뉴</strong></li>
+				<li><img alt="list06" src="/images/index/list06.gif"> <span>내
+						차와 함께 <br>올 수 있는
+				</span> <strong>주차공간</strong></li>
+			</ul>
+		</div>
+		<div class="order-area">
+			<div>
+				<img alt="order" src="/images/index/order.png">
+				<div class="order-text">
+					<strong><a href="tel:1599-0505">02-6953-2002</a></strong>
+					<h2>집에서 만나는 버거킹</h2>
+					<p>딜리버리 전화주문 안내 10:00-22:00 / 연중무휴 (매장별로 상이할 수 있습니다.)</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<th:block th:insert="~{layout/layout :: Footer}" />
+	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<th:block th:insert="~{layout/layout-admin :: head}" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#cate").keyup(fnKeyup);
+	});
+	
+	
+	function fnKeyup(){
+		var cate=$(this);
+		var in_text=$(this).val().trim();
+		
+		
+		
+		$.ajax({
+			url:`/admin/reg-category/${in_text}`,
+			success:function(result){
+				if(result==true){
+					cate.next().text("등록가능").css("color","green");
+				}else{
+					cate.next().text("존재하는 카테고리명").css("color","red");
+				}
+				
+			}
+		});
+		
+	}
+	</script>
+</head>
+
+<body class="flex">
+	<th:block th:insert="~{layout/layout-admin :: header}"/>
+	<main>
+		<h1>관리자페이지</h1>
+		<div>
+			<p>카테고리등록페이지</p>
+			<form action="/admin/reg-category" method="post">
+				<ul>
+					<li>
+						<input type="text" id="cate" name="name" placeholder="카테고리">
+						<div class="cate-msg"></div>
+					</li>
+					<li><button>등록</button></li>
+				</ul>
+				
+			</form>
+		</div>
+	</main>
+</body>
+</html>

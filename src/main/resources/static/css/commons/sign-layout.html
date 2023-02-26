@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ th:fragment="signLayout(head, main)" >
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="/css/commons/common.css">
+	<link rel="stylesheet" href="/css/commons/sign-header.css">
+	<link rel="stylesheet" href="/css/commons/sign-footer.css">		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>	
+	<header>
+		<h1>상단영역</h1>
+		<div class="wrap viwe-size">
+			<nav id="menu">
+				<h1>메인메뉴</h1>
+				<section class="logo">
+					<a href="/"></a>
+				</section>
+				<section class="mnb">					
+					<div class="btn_login">
+						<button type="button">
+							<a href="/signup"><span>회원가입</span></a>
+						</button>
+					</div>
+					<ul class="top-menu">
+						<li><a href="/"><span>브랜드홈</span></a></li>
+						<li><a href="/signin"><span>로그인</span></a></li>
+						<li><a href="/faq"><span>고객센터</span></a></li>
+					</ul>
+				</section>				
+			</nav>			
+		</div>
+		<nav class="lnb"></nav>
+	</header>
+		
+	<footer>
+		<h1>하단영역</h1>
+		<div class="wrap">
+			
+			<section id="copyright">
+				<div class="flex between view-size">
+					<section class="copy-L">
+						<h1>회사</h1>
+						<p>CUSTOM BURGER</p>
+						<div class="wrap">
+							<dl class="flex">
+								<dt>노원지점</dt>
+								<dd>서울특별시 노원구 상계로3길 21 3층, 6층</dd>
+							</dl>
+							<dl class="flex">
+								<dt>서울본점</dt>
+								<dd>서울특별시 강남구 강남대로 428 만이빌딩 5, 10층</dd>
+							</dl>
+							<dl class="flex">
+								<dt>상호</dt>
+								<dd>커스텀버거</dd>
+								<dt>대표자</dt>
+								<dd>신재근</dd>
+								<dt>사업자등록번호</dt>
+								<dd>123-45-12345</dd>
+							</dl>
+							<p>Copyright 2022 CutomBurger Co., Ltd. All right Reserved</p>
+						</div>						
+					</section>
+					<section class="copy-R">
+						<div class="wrap">
+							<ul class="con">
+								<li><a><span>이용약관</span></a></li>
+								<li><a><span>개인정보처리방침</span></a></li>
+								<li><a><span>법적고지</span></a></li>
+							</ul>
+							<div class="f-btn">
+								<a><span>인재채용</span></a>
+								<a><span>가맹점모집</span></a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+		</div>
+	</footer>
+</body>
+</html>

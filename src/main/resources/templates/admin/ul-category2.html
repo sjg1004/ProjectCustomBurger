@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<button type="button"><span>메뉴소개</span></button>	
+<ul  class="sub">
+	
+		<li th:value="${dto.no}" th:each=" dto: ${list}" >
+			<a th:href="|/common/category/${dto.no}/goods|" th:text="${dto.name}"></a>
+		</li>
+
+</ul> 
+</html>

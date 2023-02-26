@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<select class="category" name="categoryNo">
+		<option class="depth">카테고리선택</option>
+		<th:block th:each="dto:${list}">
+		<option th:value="${dto.no}" th:text="${dto.name}">카테고리선택</option>
+		</th:block>
+		
+	</select>
+</html>

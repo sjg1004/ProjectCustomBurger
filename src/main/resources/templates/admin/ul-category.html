@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<ul  class="flex cate-name">
+	
+		<li th:value="${dto.no}" class="cate" th:each=" dto: ${list}" >
+			<a th:href="|/common/category/${dto.no}/goods|" th:text="${dto.name}"></a>
+		</li>
+
+</ul> 
+</html>
